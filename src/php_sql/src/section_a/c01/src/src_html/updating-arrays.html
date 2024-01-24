@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Updating-arrays</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      $nutrition = [
+          "fat" =&gt; 38,
+          "sugar" =&gt; 51,
+          "salt" =&gt; 0.25,
+      ];
+      $nutrition["fat"] = 36;
+      $nutrition["fiber"] = 2.1;
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;html&gt;
+        &lt;head&gt;
+          &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1&gt;The Candy Store&lt;/h1&gt;
+          &lt;h2&gt;$nutrition (per 100g)&lt;/h2&gt;
+          &lt;p&gt;Fat: &lt;?= $nutrition["fat"] ?&gt;&lt;/p&gt;
+          &lt;p&gt;Sugar: &lt;?= $nutrition["sugar"] ?&gt;&lt;/p&gt;
+          &lt;p&gt;Salt: &lt;?= $nutrition["salt"] ?&gt;&lt;/p&gt;
+          &lt;p&gt;Fiber: &lt;?= $nutrition["fiber"] ?&gt;&lt;/p&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+    </div>
+   </pre>
+  </body>
+</html>

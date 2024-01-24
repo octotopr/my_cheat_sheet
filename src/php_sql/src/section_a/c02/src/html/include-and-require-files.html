@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>include-and-require-files</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      $stock = 25;
+      
+      if ($stock &gt;= 10) {
+          $message = "Good availability";
+      }
+      if ($stock &gt; 0 && $stock &lt; 10) {
+          $message = "Low stock";
+      }
+      if ($stock == 0) {
+          $message = "Out of stock";
+      }
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;?php require_once "includes/header.php"; ?&gt;
+      &lt;h2&gt;Chocolate&lt;/h2&gt;
+      &lt;p&gt;&lt;?= $message ?&gt;&lt;/p&gt;
+      &lt;?php include "includes/footer.php"; ?&gt;
+    </div>
+   </pre>
+  </body>
+</html>

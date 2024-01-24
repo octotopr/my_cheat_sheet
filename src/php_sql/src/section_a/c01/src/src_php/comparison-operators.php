@@ -11,7 +11,7 @@ $can_buy = ($wanted <= $stock);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comparison Operators</title>
-    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/styles.css" type="text/css" />
 </head>
 
 <body>

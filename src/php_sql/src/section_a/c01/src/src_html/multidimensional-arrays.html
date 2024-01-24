@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multidimensional-arrays</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      $offers = [
+          ["name" =&gt; "Toffee", "price" =&gt; 5, "stock" =&gt; 120,],
+          ["name" =&gt; "Mints", "price" =&gt; 3, "stock" =&gt; 66,],
+          ["name" =&gt; "Fudge", "price" =&gt; 4, "stock" =&gt; 97,],
+      ];
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;html&gt;
+        &lt;head&gt;
+          &lt;title&gt;Multidimensional Arrays&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1&gt;The Candy Store&lt;/h1&gt;
+          &lt;h2&gt;Offers&lt;/h2&gt;
+          &lt;p&gt;&lt;?= $offers[0]["name"] ?&gt; - &lt;?= $offers[0]["price"] ?&gt;&lt;/p&gt;
+          &lt;p&gt;&lt;?= $offers[1]["name"] ?&gt; - &lt;?= $offers[1]["price"] ?&gt;&lt;/p&gt;
+          &lt;p&gt;&lt;?= $offers[2]["name"] ?&gt; - &lt;?= $offers[2]["price"] ?&gt;&lt;/p&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+    </div>
+   </pre>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      $username = "Dima";
+      $greeting = "Hello " . $username . '.';
+      $offer = [
+          "item" =&gt; "Chocolate",
+          "qty" =&gt; 5,
+          "price" =&gt; 5,
+          "discount" =&gt; 4
+      ];
+      $usual_price = $offer["qty"] * $offer["price"];
+      $offer_price = $offer["qty"] * $offer["discount"];
+      $saving = $usual_price - $offer_price;
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;The Candy Store&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;The Candy Store&lt;/h1&gt;
+        &lt;h2&gt;Multi-buy Offer&lt;/h2&gt;
+        &lt;p&gt;&lt;?= $greeting ?&gt;&lt;/p&gt;
+        &lt;p class="sticker"&gt;Save $&lt;?= $saving ?&gt;&lt;/p&gt;
+        &lt;p&gt;Buy $&lt;?= $offer_price ?&gt;&lt;br&gt; (usual price $&lt;?= $usual_price ?&gt;)&lt;/p&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+    </div>
+   </pre>
+  </body>
+</html>

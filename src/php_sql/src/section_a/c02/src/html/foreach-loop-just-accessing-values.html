@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>foreach Loop - Just Accessing Values</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css"
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      $best_sellers = ["Tofee", "Mints", "Fudge",];
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;foreach Loop - Just Accessing Values&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;The Candy Store&lt;/h1&gt;
+        &lt;h2&gt;Best Sellers&lt;/h2&gt;
+        &lt;?php foreach ($best_sellers as $product) { ?&gt;
+            &lt;p&gt;&lt;?= $product ?&gt;&lt;/p&gt;
+        &lt;?php } ?&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+    </div>
+   </pre>
+  </body>
+</html>

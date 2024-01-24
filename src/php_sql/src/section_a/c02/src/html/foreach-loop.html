@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>foreach-loop</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      $products = [
+          "Tofee" =&gt; 2.99,
+          "Mints" =&gt; 1.99,
+          "Fudge" =&gt; 3.49,
+      ];
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;foreach Loop&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;The Candy Store&lt;/h1&gt;
+        &lt;h2&gt;Price List&lt;/h2&gt;
+        &lt;table&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Item&lt;/th&gt;
+              &lt;th&gt;Price&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;?php foreach ($products as $item =&gt; $price) { ?&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;&lt;?= $item ?&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;?= $price ?&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+          &lt;?php } ?&gt;
+        &lt;/table&gt;
+      &lt;/body&gt;
+      
+      &lt;/html&gt;
+    </div>
+   </pre>
+  </body>
+</html>

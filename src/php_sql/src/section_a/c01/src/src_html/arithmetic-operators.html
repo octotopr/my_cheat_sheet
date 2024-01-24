@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arithmetic-operators</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      $items = 3;
+      $cost = 5;
+      $subtotal = $cost + $items;
+      $tax = ($subtotal / 100) * 20;
+      $total = $subtotal + $tax;
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;html&gt;
+        &lt;head&gt;
+          &lt;title&gt;Mathematical Operators&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1&gt;The Candy Store&lt;/h1&gt;
+          &lt;h2&gt;Shopping Cart&lt;/h2&gt;
+          &lt;p&gt;Items: &lt;?= $items ?&gt;&lt;/p&gt;
+          &lt;p&gt;Cost per pack: $&lt;?= $cost ?&gt;&lt;/p&gt;
+          &lt;p&gt;Subtotal: $&lt;?= $subtotal ?&gt;&lt;/p&gt;
+          &lt;p&gt;Tax: $&lt;?= $tax ?&gt;&lt;/p&gt;
+          &lt;p&gt;Total: $&lt;?= $total ?&gt;&lt;/p&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+    </div>
+   </pre>
+  </body>
+</html>

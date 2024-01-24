@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for-php</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      $price = 1.99;
+      ?>gt;
+    </div>
+    <div class="html">
+      &lt;?php
+      $price = 1.99;
+      ?&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;for Loop&lt;/title&gt;
+      &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1&gt;gt;The Candy Store&lt;/h1&gt;
+          &lt;h2&gt;Prices for Multiple Packs&lt;/h2&gt;
+          &lt;p&gt;
+            &lt;?php
+            for ($i = 1; $i &lt;= 10; $i++) {
+              echo $i;
+              echo " packs cost $";
+              echo $price * $i;
+              echo "&lt;br /&gt;"
+            }
+            ?&gt;
+          &lt;/p&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+    </div>
+   </pre>
+  </body>
+</html>

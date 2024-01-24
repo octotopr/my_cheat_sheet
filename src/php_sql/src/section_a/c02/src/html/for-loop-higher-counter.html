@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for-loop-higher-counter</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      $price = 1.99;
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;html lang="en"&gt;
+        &lt;head&gt;
+          &lt;title&gt;for Loop - Higher Counter&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1&gt;The Candy Store&lt;/h1&gt;
+          &lt;h2&gt;Prices for Large Orders&lt;/h2&gt;
+          &lt;p&gt;
+            &lt;?php
+            for ($i = 10; $i &lt;= 100; $i = $i + 10) {
+                echo $i;
+                echo " packs cost $";
+                echo $price * $i;
+                echo "&lt;br /&gt;";
+            }
+            ?&gt;
+          &lt;/p&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+    </div>
+   </pre>
+  </body>
+</html>
