@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getters-and-setters</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      
+      declare(strict_types=1);
+      
+      class Account
+      {
+          public int $number;
+          public string $type;
+          public float $balance;
+      
+          public function __construct(int $number, string $type, float $balance = 0.00)
+          {
+              $this-&gt;number = $number;
+              $this-&gt;type = $type;
+              $this-&gt;balance = $balance;
+          }
+      
+          public function deposit(float $amount): float
+          {
+              $this-&gt;balance += $amount;
+              return $this-&gt;balance;
+          }
+      
+          public function withdraw(float $amount): float
+          {
+              $this-&gt;balance -= $amount;
+              return $this-&gt;balance;
+          }
+      
+          public function getBalance(): float
+          {
+              return $this-&gt;balance;
+          }
+      }
+      $account = new Account(20148896, "Savings", 80.00);
+      ?&gt;
+     </div>
+     <div class="html">
+       &lt;?php include "includes/header.php"; ?&gt;
+       &lt;h2&gt;&lt;?= $account-&gt;type ?&gt; Account&lt;/h2&gt;
+       &lt;p&gt;Previous balance: $&lt;?= $account-&gt;getBalance() ?&gt;&lt;/p&gt;
+       &lt;p&gt;New balance: $&lt;?= $account-&gt;deposit(35.00) ?&gt;&lt;/p&gt;
+       &lt;?php include "includes/footer.php"; ?&gt;
+     </div>
+        
+   </pre>
+  </body>
+</html>

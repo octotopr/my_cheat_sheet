@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>strict-types</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+        <div class="php">
+          &lt;?php
+          
+          declare(strict_types=1);
+          
+          $price = 4;
+          $quantity = 3;
+          
+          function calculate_total(int $price, int $quantity): int
+          {
+              return $price * $quantity;
+          }
+          
+          $total = calculate_total($price, $quantity);
+          ?&gt;
+        </div>
+        <div class="html">
+          &lt;html&gt;
+          &lt;head&gt;
+            &lt;title&gt;Return Type Declarations&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;The Candy Store&lt;/h1&gt;
+            &lt;h2&gt;Chocolates&lt;/h2&gt;
+            &lt;p&gt;Total $&lt;?= $total ?&gt;&lt;/p&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </div>
+    </pre>
+  </body>
+</html>

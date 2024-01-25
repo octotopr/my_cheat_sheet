@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>constructor-methods</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+        <div class="php">
+          &lt;?php
+          
+          declare(strict_types=1);
+          
+          class Account
+          {
+              public int $number;
+              public string $type;
+              public float $balance;
+          
+              public function __construct(int $number, string $type, float $balance = 0.00)
+              {
+                  $this-&gt;number = $number;
+                  $this-&gt;type = $type;
+                  $this-&gt;balance = $balance;
+              }
+          
+              public function deposit(float $amount): float
+              {
+                  $this-&gt;balance += $amount;
+                  return $this-&gt;balance;
+              }
+          
+              public function withdraw(float $amount): float
+              {
+                  $this-&gt;balance -= $amount;
+                  return $this-&gt;balance;
+              }
+          }
+          $checking = new Account(43161176, "Checking", 32.00);
+          $savings = new Account(20148876, "Savings", 542.00);
+          ?&gt;
+        </div>
+        <div class="html">
+          &lt;?php include "includes/header.php"; ?&gt;
+          &lt;h2&gt;Account Balance&lt;/h2&gt;
+          &lt;table&gt;
+              &lt;tr&gt;
+                  &lt;th&gt;Date&lt;/th&gt;
+                  &lt;th&gt;&lt;?= $checking-&gt;type ?&gt;&lt;/th&gt;
+                  &lt;th&gt;&lt;?= $savings-&gt;type ?&gt;&lt;/th&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;23 June&lt;/td&gt;
+                  &lt;td&gt;$&lt;?= $checking-&gt;balance ?&gt;&lt;/td&gt;
+                  &lt;td&gt;$&lt;?= $savings-&gt;balance ?&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;24 June&lt;/td&gt;
+                  &lt;td&gt;$&lt;?= $checking-&gt;deposit(12.33) ?&gt;&lt;/td&gt;
+                  &lt;td&gt;$&lt;?= $savings-&gt;withdraw(100.00) ?&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;25 June&lt;/td&gt;
+                  &lt;td&gt;$&lt;?= $checking-&gt;withdraw(5.03) ?&gt;&lt;/td&gt;
+                  &lt;td&gt;$&lt;?= $savings-&gt;deposit(300.00) ?&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+          &lt;/table&gt;
+          &lt;?php include "includes/footer.php"; ?&gt;
+        </div>
+    </pre>
+  </body>
+</html>

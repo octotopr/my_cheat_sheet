@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>array-and-object</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      
+      declare(strict_types=1);
+      
+      class Account
+      {
+          public    array  $number;
+          public    string $type;
+          protected float  $balance;
+      
+          public function __construct(array $number, string $type, float $balance = 0.00)
+          {
+              $this-&gt;number  = $number;
+              $this-&gt;type    = $type;
+              $this-&gt;balance = $balance;
+          }
+      
+          public function deposit(float $amount): float
+          {
+              $this-&gt;balance += $amount;
+              return $this-&gt;balance;
+          }
+      
+          public function withdraw(float $amount): float
+          {
+              $this-&gt;balance -= $amount;
+              return $this-&gt;balance;
+          }
+      
+          public function getBalance(): float
+          {
+              return $this-&gt;balance;
+          }
+      }
+      
+      //Create an array to store in the property
+      $numbers = [
+          'account_number' =&gt; 12345678,
+          'routing_number' =&gt; 987654321,
+      ];
+      
+      //Create an instance of the class and set properties
+      $account = new Account($numbers, 'Savings', 10.00);
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;?php include 'includes/header.php'; ?&gt;
+      &lt;h2&gt;&lt;?= $account-&gt;type ?&gt; account&lt;/h2&gt;
+      Account &lt;?= $account-&gt;number['account_number']
+              ?&gt;&lt;br&gt;
+      Routing &lt;?= $account-&gt;number['routing_number'] ?&gt;
+      &lt;?php include 'includes/footer.php'; ?&gt;
+    </div>
+   </pre>
+  </body>
+</html>

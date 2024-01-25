@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>objects-and-methods</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      class Account
+      {
+        public int $number;
+        public string $type;
+        public float $balance;
+      
+        public function deposit(float $amount): float
+        {
+            $this-&gt;balance += $amount;
+            return $this-&gt;balance;
+        }
+      
+        public function withdraw(float $amount): float
+        {
+            $this-&gt;balance -= $amount;
+            return $this-&gt;balance;
+        }
+      }
+      
+      $account = new Account;
+      $account-&gt;balance = 100.00;
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;?php include "includes/header.php"; ?&gt;
+      &lt;p&gt;$&lt;?= $account-&gt;deposit(50.00) ?&gt;&lt;/p&gt;
+      &lt;?php include "includes/footer.php"; ?&gt;
+    </div>
+   </pre>
+  </body>
+</html>

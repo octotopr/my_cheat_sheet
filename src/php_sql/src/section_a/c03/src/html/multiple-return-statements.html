@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>multiple-return-statements</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      $stock = 25;
+      
+      function get_stock_message($stock)
+      {
+          if ($stock &gt;= 10) {
+              return "Good availability";
+          }
+      
+          if ($stock &gt; 0 && $stock &lt; 10) {
+              return "Low stock";
+          }
+      
+          return "Out of stock";
+      }
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Multiple Return Statements&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;The Candy Store&lt;/h1&gt;
+        &lt;h2&gt;Chocolates&lt;/h2&gt;
+        &lt;p&gt;&lt;?= get_stock_message($stock) ?&gt;&lt;/p&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+    </div>
+   </pre>
+  </body>
+</html>

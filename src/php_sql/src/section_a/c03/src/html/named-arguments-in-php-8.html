@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>named-arguments-in-php-8</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+      <div class="php">
+        &lt;?php
+        function calculate_cost($cost, $quantity, $discount = 0, $tax = 20)
+        {
+            $cost = $cost * $quantity;
+            $tax = $cost * ($tax / 100);
+            return ($cost + $tax) - $discount;
+        }
+        ?&gt;
+      </div>
+      <div class="html">
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;title&gt;Default Values for Parameters&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1&gt;The Candy Store&lt;/h1&gt;
+          &lt;h2&gt;Chocolates&lt;/h2&gt;
+          &lt;p&gt;Dark chocolate $&lt;?= calculate_cost(quantity: 10, cost: 5, tax: 5, discount: 2) ?&gt;&lt;/p&gt;
+          &lt;p&gt;Milk chocolate $&lt;?= calculate_cost(quantity: 10, cost: 5, tax: 5) ?&gt;&lt;/p&gt;
+          &lt;p&gt;White chocolate $&lt;?= calculate_cost(5, 10, tax: 5) ?&gt;&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+      </div>
+  </pre>
+  </body>
+</html>

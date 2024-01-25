@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>basic-functions</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      function write_logo()
+      {
+          echo "&lt;img src='../../img/logo.png' alt='logo'";
+      }
+      
+      function notice()
+      {
+          $year = date('Y');
+          echo '&amp;copy; ' . $year;
+      }
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Basic Functions&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;header&gt;
+          &lt;h1&gt;&lt;?php write_logo() ?&gt; The Candy Store&lt;/h1&gt;
+        &lt;/header&gt;
+        &lt;article&gt;
+          &lt;h2&gt;Welcome to the Candy Store&lt;/h2&gt;
+        &lt;/article&gt;
+        &lt;footer&gt;
+          &lt;?php notice() ?&gt;
+          &lt;?php write_logo() ?&gt;
+        &lt;/footer&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+    </div>
+   </pre>
+  </body>
+</html>

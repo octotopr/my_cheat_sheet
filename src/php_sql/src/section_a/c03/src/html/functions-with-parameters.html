@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>functions-with-parameters</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      function calculate_total($price, $quantity)
+      {
+          $cost = $price * $quantity;
+          $tax = $cost * (20 / 100);
+          $total = $cost + $tax;
+          return $total;
+      }
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Functions with Parameters&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;The Candy Store&lt;/h1&gt;
+        &lt;p&gt;Mints: $&lt;?= calculate_total(1, 5) ?&gt;&lt;/p&gt;
+        &lt;p&gt;Toffee: $&lt;?= calculate_total(3, 5) ?&gt;&lt;/p&gt;
+        &lt;p&gt;Fudge: $&lt;?= calculate_total(5, 4) ?&gt;&lt;/p&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+    </div>
+   </pre>
+  </body>
+</html>

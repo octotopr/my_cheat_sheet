@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>objects-and-properties</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      class Customer
+      {
+          public string $forename;
+          public string $surname;
+          public string $email;
+          public string $password;
+      }
+      
+      class Account
+      {
+          public int $number;
+          public string $type;
+          public float $balance;
+      }
+      
+      $customer = new Customer();
+      $account = new Account();
+      $customer-&gt;email = "mim114@yandex.ru";
+      $account-&gt;balance = 1000.00;
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;?php include "includes/header.php"; ?&gt;
+      &lt;p&gt;Email: &lt;?= $customer-&gt;email ?&gt;&lt;/p&gt;
+      &lt;p&gt;Balance: $&lt;?= $account-&gt;balance ?&gt;&lt;/p&gt;
+      &lt;?php include "includes/footer.php"; ?&gt;
+    </div>
+   </pre>
+  </body>
+</html>

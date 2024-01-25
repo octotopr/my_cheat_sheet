@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>global-and-static-variables</title>
+    <link rel="stylesheet" type="text/css" href="../../css/for_html.css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      $tax_rate = 0.2;
+      
+      function calculate_running_total($price, $quantity)
+      {
+          global $tax_rate;
+          static $running_total = 0;
+          $total = $price * $quantity;
+          $tax   = $total * $tax_rate;
+          $running_total = $running_total + $total + $tax;
+          return $running_total;
+      }
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Global and Static Variables&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;The Candy Store&lt;/h1&gt;
+        &lt;table&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Item&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+            &lt;th&gt;Qty&lt;/th&gt;
+            &lt;th&gt;Running total&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td class="name"&gt;Mints:&lt;/td&gt;
+            &lt;td&gt;$2&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;$&lt;?= calculate_running_total(2, 5) ?&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td class="name"&gt;Toffee:&lt;/td&gt;
+            &lt;td&gt;$3&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;$&lt;?= calculate_running_total(3, 5) ?&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td class="name"&gt;Total:&lt;/td&gt;
+            &lt;td&gt;$5&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
+            &lt;td&gt;$&lt;?= calculate_running_total(5, 4) ?&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td class="name"&gt;Fudge:&lt;/td&gt;
+            &lt;td&gt;$5&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
+            &lt;td&gt;$&lt;?= calculate_running_total(5, 4) ?&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+    </div>
+   </pre>
+  </body>
+</html>

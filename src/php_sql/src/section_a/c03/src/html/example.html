@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>example</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+        <div class="php">
+          &lt;?php
+          
+          declare(strict_types=1);
+          $candy = [
+              'Toffee' =&gt; ['price' =&gt; 3, 'stock' =&gt; 12],
+              'Mints'  =&gt; ['price' =&gt; 2, 'stock' =&gt; 26],
+              'Fudge'  =&gt; ['price' =&gt; 4, 'stock' =&gt; 8],
+          ];
+          
+          $tax = 20;
+          
+          function get_reorder_message(int $stock): string
+          {
+              return ($stock &lt; 10) ? 'Yes' : 'No';
+          }
+          
+          function get_total_value(float $price, int $quantity): float
+          {
+              return $price * $quantity;
+          }
+          
+          function get_tax_due(float $price, int $quantity, int $tax = 0): float
+          {
+              return ($price * $quantity) * ($tax / 100);
+          }
+          ?&gt;
+        </div>
+        <div class="html">
+          &lt;html&gt;
+          &lt;head&gt;
+            &lt;title&gt;Functions Example&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;The Candy Store&lt;/h1&gt;
+            &lt;h2&gt;Stock Control&lt;/h2&gt;
+            &lt;table&gt;
+              &lt;tr&gt;
+                &lt;th&gt;Product&lt;/th&gt;
+                &lt;th&gt;Stock&lt;/th&gt;
+                &lt;th&gt;Re-order&lt;/th&gt;
+                &lt;th&gt;Total value&lt;/th&gt;
+                &lt;th&gt;Tax due&lt;/th&gt;
+              &lt;/tr&gt;
+              &lt;?php foreach ($candy as $product_name =&gt; $data) { ?&gt;
+                &lt;tr&gt;
+                  &lt;td class="name"&gt;&lt;?= $product_name ?&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;?= $data['stock'] ?&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;?= get_reorder_message($data['stock']) ?&gt;&lt;/td&gt;
+                  &lt;td&gt;$&lt;?= get_total_value($data['price'], $data['stock']) ?&gt;&lt;/td&gt;
+                  &lt;td&gt;$&lt;?= get_tax_due($data['price'], $data['stock'], $tax) ?&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;?php } ?&gt;
+            &lt;/table&gt;
+          &lt;/body&gt;
+        </div>
+    </pre>
+  </body>
+</html>

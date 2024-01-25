@@ -14,4 +14,3 @@ if ($stock == 0) {
 <?php require_once "includes/header.php"; ?>
 <h2>Chocolate</h2>
 <p><?= $message ?></p>
-<?php include "includes/footer.php"; ?>
