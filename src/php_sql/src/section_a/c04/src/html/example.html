@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>example</title>
+    <link rel="stylesheet" href="../../css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      include "classes/Account.php";
+      include "classes/Customer.php";
+      
+      $accounts = [
+          new Account(13456308, "Checking", -20),
+          new Account(98471649, "Savings", 380),
+      ];
+      
+      $customer = new Customer("Dima", "Stone", "mim@yandex.ru", "Jup!tr345", $accounts);
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;?php include "includes/header.php"; ?&gt;
+      &lt;h2&gt;Name: &lt;b&gt;&lt;?= $customer-&gt;getFullName() ?&gt;&lt;/b&gt;&lt;/h2&gt;
+      &lt;table&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Account Number&lt;/th&gt;
+              &lt;th&gt;Account Type&lt;/th&gt;
+              &lt;th&gt;Balance&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;?php foreach ($customer-&gt;accounts as $account) { ?&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;&lt;?= $account-&gt;number ?&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;?= $account-&gt;type ?&gt;&lt;/td&gt;
+                  &lt;?php if ($account-&gt;getBalance() &gt;= 0) { ?&gt;
+                      &lt;td class="credit"&gt;
+                      &lt;?php } else { ?&gt;
+                      &lt;td class="overdrawn"&gt;
+                      &lt;?php } ?&gt;
+                      $ &lt;?= $account-&gt;getBalance() ?&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+          &lt;?php } ?&gt;
+      &lt;/table&gt;
+      &lt;?php include "includes/footer.php"; ?&gt;
+    </div>
+   </pre>
+  </body>
+</html>

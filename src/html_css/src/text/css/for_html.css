@@ -1,0 +1,27 @@
+:root {
+  box-sizing: border-box;
+  font-size: calc(0.5rem + 0.8vw);
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+pre {
+  background-color: antiquewhite;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+.php {
+  background-color: purple;
+  border-radius: 1em 1em 1em 1em;
+  color: white;
+  overflow: auto;
+}
+.html {
+  background-color: aqua;
+  border-radius: 1em 1em 1em 1em;
+  overflow: auto;
+}

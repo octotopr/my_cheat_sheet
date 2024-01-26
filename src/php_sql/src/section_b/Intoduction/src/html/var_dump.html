@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>var dump</title>
+    <link rel="stylesheet" href="css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php">
+      &lt;?php
+      $username = "Dima";
+      $user_array = [
+          "name" =&gt; "Dima",
+          "age" =&gt; 38,
+          "active" =&gt; true,
+      ];
+      
+      class user
+      {
+          public $name;
+          public $age;
+          public $active;
+      
+          public function __construct($name, $age, $active)
+          {
+              $this-&gt;name = $name;
+              $this-&gt;age = $age;
+              $this-&gt;active = $active;
+          }
+      }
+      
+      $user_object = new User("Dima", 38, true);
+      ?&gt;
+    </div>
+    <div class="html">
+      &lt;?php include "includes/header.php"; ?&gt;
+      &lt;pre&gt;
+          &lt;p&gt;Scalar: &lt;?php var_dump($username); ?&gt;&lt;/p&gt;
+          &lt;p&gt;Array: &lt;?php var_dump($user_array); ?&gt;&lt;/p&gt;
+          &lt;p&gt;Object: &lt;?php var_dump($user_object); ?&gt;&lt;/p&gt;
+      &lt;/pre&gt;
+      &lt;?php include "includes/footer.php"; ?&gt;
+    </div>
+   </pre>
+  </body>
+</html>

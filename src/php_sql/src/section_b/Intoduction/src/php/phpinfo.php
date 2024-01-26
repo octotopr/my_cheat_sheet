@@ -1,0 +1,3 @@
+<pre>
+<?php phpinfo(); ?>
+</pre>

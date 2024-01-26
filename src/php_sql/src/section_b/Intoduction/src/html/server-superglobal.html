@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>server-superglobal</title>
+    <link rel="stylesheet" href="css/for_html.css" type="text/css" />
+  </head>
+  <body>
+    <pre>
+    <div class="html" style="border-radius: 1em 1em 1em 1em">
+      &lt;?php include 'includes/header.php' ?&gt;
+      &lt;table&gt;
+          &lt;tr&gt;
+              &lt;th colspan="2" class="title"&gt;Data About Browser Sent In HTTP Headers &lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Browser's IP address &lt;/th&gt;
+              &lt;td&gt;&lt;?= $_SERVER['REMOTE_ADDR'] ?&gt; &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Type of browser &lt;/th&gt;
+              &lt;td&gt;&lt;?= $_SERVER['HTTP_USER_AGENT'] ?&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;th colspan="2" class="title"&gt;HTTP Request &lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Host name &lt;/th&gt;
+              &lt;td&gt;&lt;?= $_SERVER['HTTP_HOST'] ?&gt; &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;th&gt;URI after host name &lt;/th&gt;
+              &lt;td&gt;&lt;?= $_SERVER['REQUEST_URI'] ?&gt; &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Query string &lt;/th&gt;
+              &lt;td&gt;&lt;?= $_SERVER['QUERY_STRING'] ?&gt; &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;th&gt;HTTP request method &lt;/th&gt;
+              &lt;td&gt;&lt;?= $_SERVER['REQUEST_METHOD'] ?&gt; &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;th colspan="2" class="title"&gt;Location of the File Being Executed &lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Document root &lt;/th&gt;
+              &lt;td&gt;&lt;?= $_SERVER['DOCUMENT_ROOT'] ?&gt; &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Path from document root &lt;/th&gt;
+              &lt;td&gt;&lt;?= $_SERVER['SCRIPT_NAME'] ?&gt; &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Absolute path &lt;/th&gt;
+              &lt;td&gt;&lt;?= $_SERVER['SCRIPT_FILENAME'] ?&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;?php include 'includes/footer.php' ?&gt;
+    </div>
+   </pre>
+  </body>
+</html>
