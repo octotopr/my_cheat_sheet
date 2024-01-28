@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>case-and-character-count</title>
+    <link rel="stylesheet" href="css/for_html.css" type="text/css" />
+    <style>
+      snap {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+    <div class="php" style="border-radius: 1em 1em 1em 1em;">
+      &lt;?php
+      $text = "Home sweet homw";
+      ?&gt;
+      &lt;?php include "includes/header.php"; ?&gt;
+      &lt;p&gt;
+      &lt;b&gt;Lowercase:&lt;b /&gt;
+      &lt;?= <snap>strtolower</snap>($text); ?&gt;&lt;br /&gt;
+      &lt;b&gt;Uppercase:&lt;b /&gt;
+      &lt;?= <snap>strtoupper</snap>($text); ?&gt;&lt;br /&gt;
+      &lt;b&gt;Uppercase first letter:&lt;b /&gt;
+      &lt;?= <snap>ucfirst</snap>($text); ?&gt;&lt;br /&gt;
+      &lt;b&gt;Character count:&lt;b /&gt;
+      &lt;?= <snap>strlen</snap>($text); ?&gt;&lt;br /&gt;
+      &lt;b&gt;Word count:&lt;b /&gt;
+      &lt;?= <snap>str_word_count</snap>($text); ?&gt;&lt;br /&gt;
+      &lt;/p&gt;
+      &lt;?php include "includes/footer.php"; ?&gt;
+    </div>
+   </pre>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>array-updating-functions</title>
+    <link rel="stylesheet" href="css/for_html.css" type="text/css" />
+    <style>
+      snap {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+    <div class="php" style="border-radius: 1em 1em 1em 1em;">
+      &lt;?php
+      $order = ['notebook', 'pencil', 'eraser',];
+      <snap>array_unshift</snap>($order, 'scissors');
+      <snap>array_pop</snap>($order);
+      $items = implode(', ', $order);
+      $classes = [
+          'Patchwork' =&gt; 'April 12th',
+          'Knitting'  =&gt; 'May 4th',
+          'Lettering' =&gt; 'May 18th',
+      ];
+      <snap>array_shift</snap>($classes);
+      $new     = [
+          'Origami'  =&gt; 'June 5th',
+          'Quilting' =&gt; 'June 23rd',
+      ];
+      $classes = <snap>array_merge</snap>($classes, $new);
+      ?&gt;
+      &lt;?php include 'includes/header.php'; ?&gt;
+      
+      &lt;h1&gt;Order&lt;/h1&gt;
+      &lt;?= $items ?&gt;
+      &lt;h1&gt;Classes&lt;/h1&gt;
+      &lt;?php foreach ($classes as $description =&gt; $date) { ?&gt;
+          &lt;b&gt;&lt;?= $description ?&gt;&lt;/b&gt; &lt;?= $date ?&gt;&lt;br&gt;
+      &lt;?php } ?&gt;
+      
+      &lt;?php include 'includes/footer.php'; ?&gt;
+    </div>
+   </pre>
+  </body>
+</html>

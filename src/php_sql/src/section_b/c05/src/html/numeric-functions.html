@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>numeric-functions</title>
+    <link rel="stylesheet" href="css/for_html.css" type="text/css" />
+    <style>
+      snap {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+    <div class="php" style="border-radius: 1em 1em 1em 1em;">
+      &lt;?php include 'includes/header.php'; ?&gt;
+      &lt;p&gt;
+          &lt;b&gt;Round:&lt;/b&gt;                     &lt;?= <snap>round</snap>(9876.54321) ?&gt;&lt;br&gt;
+          &lt;b&gt;Round to 2 decimal places:&lt;/b&gt; &lt;?= <snap>round</snap>(9876.54321, 2) ?&gt;&lt;br&gt;
+          &lt;b&gt;Round half up:&lt;/b&gt;             &lt;?= <snap>round</snap>(1.5, 0, PHP_ROUND_HALF_UP) ?&gt;&lt;br&gt;
+          &lt;b&gt;Round half down:&lt;/b&gt;           &lt;?= <snap>round</snap>(1.5, 0, PHP_ROUND_HALF_DOWN) ?&gt;&lt;br&gt;
+          &lt;b&gt;Round up:&lt;/b&gt;                  &lt;?= <snap>ceil</snap>(1.23) ?&gt;&lt;br&gt;
+          &lt;b&gt;Round down:&lt;/b&gt;                &lt;?= <snap>floor</snap>(1.23) ?&gt;&lt;br&gt;
+          &lt;b&gt;Random number:&lt;/b&gt;             &lt;?= <snap>mt_rand</snap>(0, 10) ?&gt;&lt;br&gt;
+          &lt;b&gt;Exponential:&lt;/b&gt;               &lt;?= <snap>pow</snap>(4, 5) ?&gt;&lt;br&gt;
+          &lt;b&gt;Square root:&lt;/b&gt;               &lt;?= <snap>sqrt</snap>(16) ?&gt;&lt;br&gt;
+          &lt;b&gt;Is a number:&lt;/b&gt;               &lt;?= <snap>is_numeric</snap>(123) ?&gt;&lt;br&gt;
+          &lt;b&gt;Format number:&lt;/b&gt;             &lt;?= <snap>number_format</snap>(12345.6789, 2, ',', ' ') ?&gt;&lt;br&gt;
+      &lt;/p&gt;
+      &lt;?php include 'includes/footer.php'; ?&gt;
+    </div>
+   </pre>
+  </body>
+</html>

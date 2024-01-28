@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>files</title>
+    <link rel="stylesheet" type="text/css" href="css/for_html.css" />
+  </head>
+  <body>
+    <pre>
+    <div class="php" style="border-radius: 1em 1em 1em 1em;">
+      &lt;?php
+      $path = 'img/logo.png';
+      ?&gt;
+      &lt;?php include 'includes/header.php'; ?&gt;
+      
+      &lt;?php if (file_exists($path)) { ?&gt;
+        &lt;b&gt;Name:&lt;/b&gt;      &lt;?= pathinfo($path, PATHINFO_BASENAME) ?&gt;&lt;br&gt;
+        &lt;b&gt;Size:&lt;/b&gt;      &lt;?= filesize($path) ?&gt; bytes&lt;br&gt;
+        &lt;b&gt;Mime type:&lt;/b&gt; &lt;?= mime_content_type($path) ?&gt;&lt;br&gt;
+        &lt;b&gt;Folder:&lt;/b&gt;    &lt;?= pathinfo($path, PATHINFO_DIRNAME) ?&gt;&lt;br&gt;
+      &lt;?php } else { ?&gt;
+        &lt;p&gt;There is no such file.&lt;/p&gt;
+      &lt;?php } ?&gt;
+      
+      &lt;?php include 'includes/footer.php'; ?&gt;
+    </div>
+   </pre>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>removing-and-replacing-characters</title>
+    <link rel="stylesheet" href="css/for_html.css" type="text/css" />
+    <style>
+      snap {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+    <div class="php" style="border-radius: 1em 1em 1em 1em;">
+      &lt;?php
+      $text = '/images/uploads/';
+      ?&gt;
+      &lt;?php include 'includes/header.php'; ?&gt;
+      &lt;p&gt;
+          &lt;b&gt;Remove '/' from both ends:&lt;/b&gt;&lt;br /&gt;
+          &lt;?= <snap>trim</snap>($text, '/'); ?&gt;&lt;br /&gt;
+          &lt;b&gt;Remove '/' from the left of the string:&lt;/b&gt;&lt;br /&gt;
+          &lt;?= <snap>ltrim</snap>($text, '/'); ?&gt;&lt;br /&gt;
+          &lt;b&gt;Remove 's/' from the right of the string:&lt;/b&gt;&lt;br /&gt;
+          &lt;?= <snap>ltrim</snap>($text, 's/'); ?&gt;&lt;br /&gt;
+          &lt;b&gt;Replace 'images' with 'img':&lt;/b&gt;&lt;br&gt;
+          &lt;?= <snap>str_replace</snap>('images', 'img', $text); ?&gt;&lt;br /&gt;
+          &lt;b&gt;As above but case-insensitive:&lt;/b&gt;&lt;br /&gt;
+          &lt;?= <snap>str_ireplace</snap>('IMAGES', 'img', $text); ?&gt;&lt;br /&gt;
+          &lt;b&gt;Repeat the string:&lt;/b&gt;&lt;br /&gt;
+          &lt;?= <snap>str_repeat</snap>($text, 2); ?&gt;&lt;br /&gt;
+      &lt;/p&gt;
+      &lt;?php include 'includes/footer.php';
+    </div>
+   </pre>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>array-functions</title>
+    <link rel="stylesheet" href="css/for_html.css" type="text/css" />
+    <style>
+      snap {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+        <div class="php" style="border-radius: 1em 1em 1em 1em">
+          &lt;?php
+          $greetings    = [
+              'Hi ', 'Howdy ', 'Hello ', 'Hola ',
+              'Welcome ', 'Ciao ',
+          ];
+          $greeting_key     = <snap>array_rand</snap>($greetings);
+          $greeting         = $greetings[$greeting_key];
+          $bestsellers      = ['notebook', 'pencil', 'ink',];
+          $bestseller_count = <snap>count</snap>($bestsellers);
+          $bestseller_text  = implode(', ', $bestsellers);
+          $customer         = [
+              'forename' =&gt; 'Ivy',
+              'surname'  =&gt; 'Stone',
+              'email'    =&gt; 'ivy@eg.link',
+          ];
+          
+          if (array_key_exists('forename', $customer)) {
+              $greeting .= $customer['forename'];
+          }
+          ?&gt;
+          &lt;?php include 'includes/header.php'; ?&gt;
+          &lt;h1&gt;Best Sellers&lt;/h1&gt;
+          &lt;p&gt;&lt;?= $greeting ?&gt;&lt;/p&gt;
+          &lt;p&gt;Our top &lt;?= $bestseller_count ?&gt; items today are:
+              &lt;b&gt;&lt;?= $bestseller_text ?&gt;&lt;/b&gt;
+          &lt;/p&gt;
+          &lt;?php include 'includes/footer.php'; ?&gt;
+        </div>
+    </pre>
+  </body>
+</html>

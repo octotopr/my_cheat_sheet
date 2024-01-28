@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>regular-expression-functions</title>
+    <link rel="stylesheet" href="css/for_html.css" type="text/css" />
+    <style>
+      snap {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+    <div class="php" style="border-radius: 1em 1em 1em 1em;">
+      &lt;?php
+      $text = 'Using PHP\'s regular expression functions';
+      $path = 'code/section_b/co5/';
+      $match = <snap>preg_match</snap>('/PHP/', $text);
+      $path = <snap>preg_split</snap>('/\//', $path);
+      $text = <snap>preg_replace</snap>('/PHP/', '&lt;em&gt;PHP&lt;/em&gt;', $text);
+      ?&gt;
+      &lt;?php include 'includes/header.php'; ?&gt;
+      &lt;p&gt;
+          &lt;b&gt;Was a match found?&lt;/b&gt;&lt;br /&gt;
+          &lt;?= ($match === 1) ? 'Yes' : 'No' ?&gt;&lt;br&gt;&lt;br&gt;
+          &lt;b&gt;Parts of a path:&lt;/b&gt;&lt;br&gt;
+          &lt;?php foreach ($path as $part) { ?&gt;
+              &lt;?= $part; ?&gt;&lt;br&gt;
+          &lt;?php } ?&gt;
+          &lt;b&gt;Updated text:&lt;/b&gt;&lt;br&gt;
+          &lt;?= $text; ?&gt;
+      &lt;/p&gt;
+    </div>
+   </pre>
+  </body>
+</html>
